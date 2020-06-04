@@ -1,7 +1,5 @@
-import * as React from "react"
+import * as React from 'react';
 
-const IndexPage: React.FC = () => (
-  <div>Test</div>
-)
+const IndexPage: React.FC = () => <div>Test</div>;
 
-export default IndexPage
+export default IndexPage;
