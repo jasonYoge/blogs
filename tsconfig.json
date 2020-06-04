@@ -1,5 +1,7 @@
 {
-  "include": ["src/**/*"],
+  "include": [
+    "src/**/*"
+  ],
   "compilerOptions": {
     "jsx": "react",
     "target": "es6",
@@ -8,6 +10,8 @@
     "removeComments": true,
     "strict": true,
     "baseUrl": "./",
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true
   }
 }

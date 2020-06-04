@@ -19,10 +19,12 @@
     "react-helmet": "^6.0.0"
   },
   "devDependencies": {
-    "gatsby-plugin-tslint": "^0.0.2",
-    "prettier": "2.0.5",
-    "tslint": "^6.1.2",
-    "tslint-loader": "^3.5.4"
+    "@typescript-eslint/eslint-plugin": "^3.1.0",
+    "@typescript-eslint/parser": "^3.1.0",
+    "eslint": "^7.1.0",
+    "eslint-loader": "^4.0.2",
+    "gatsby-plugin-eslint": "^2.0.8",
+    "prettier": "2.0.5"
   },
   "keywords": [
     "gatsby"
@@ -35,7 +37,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "lint": "tslint --project tsconfig.json --config tslint.json"
+    "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx"
   },
   "repository": {
     "type": "git",
