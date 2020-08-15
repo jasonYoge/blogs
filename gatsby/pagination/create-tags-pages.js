@@ -1,7 +1,7 @@
 'use strict';
 
-const _ = require('lodash');
 const path = require('path');
+const _ = require('lodash');
 const siteConfig = require('../../config.js');
 
 module.exports = async (graphql, actions) => {
@@ -21,14 +21,14 @@ module.exports = async (graphql, actions) => {
     }
   `);
 
-  _.each(result.data.allMarkdownRemark.group, (tag) => {
+  _.each(result.data.allMarkdownRemark.group, tag => {
     const numPages = Math.ceil(tag.totalCount / postsPerPage);
     const tagSlug = `/tag/${_.kebabCase(tag.fieldValue)}`;
 
     for (let i = 0; i < numPages; i += 1) {
       createPage({
         path: i === 0 ? tagSlug : `${tagSlug}/page/${i}`,
-        component: path.resolve('./src/templates/tag-template.js'),
+        component: path.resolve('./src/templates/tag-template.tsx'),
         context: {
           tag: tag.fieldValue,
           currentPage: i,
@@ -37,8 +37,8 @@ module.exports = async (graphql, actions) => {
           prevPagePath: i <= 1 ? tagSlug : `${tagSlug}/page/${i - 1}`,
           nextPagePath: `${tagSlug}/page/${i + 1}`,
           hasPrevPage: i !== 0,
-          hasNextPage: i !== numPages - 1
-        }
+          hasNextPage: i !== numPages - 1,
+        },
       });
     }
   });

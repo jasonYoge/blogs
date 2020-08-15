@@ -10,7 +10,9 @@ module.exports = async (graphql, actions) => {
     {
       allMarkdownRemark(
         filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
-      ) { totalCount }
+      ) {
+        totalCount
+      }
     }
   `);
 
@@ -20,7 +22,7 @@ module.exports = async (graphql, actions) => {
   for (let i = 0; i < numPages; i += 1) {
     createPage({
       path: i === 0 ? '/' : `/page/${i}`,
-      component: path.resolve('./src/templates/index-template.js'),
+      component: path.resolve('./src/templates/index-template.tsx'),
       context: {
         currentPage: i,
         postsLimit: postsPerPage,
@@ -28,8 +30,8 @@ module.exports = async (graphql, actions) => {
         prevPagePath: i <= 1 ? '/' : `/page/${i - 1}`,
         nextPagePath: `/page/${i + 1}`,
         hasPrevPage: i !== 0,
-        hasNextPage: i !== numPages - 1
-      }
+        hasNextPage: i !== numPages - 1,
+      },
     });
   }
 };
