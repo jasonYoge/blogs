@@ -1,4 +1,7 @@
 module.exports = {
+  globals: {
+    __PATH_PREFIX__: true
+  },
   parser: '@typescript-eslint/parser', // Specifies the ESLint parser
   extends: [
     'eslint:recommended',
@@ -47,7 +50,7 @@ module.exports = {
     {
       files: ['*.js'],
       rules: {
-        '@typescript-eslint/no-var-requires': 'off', //
+        '@typescript-eslint/no-var-requires': 'off',
       },
     },
   ],
