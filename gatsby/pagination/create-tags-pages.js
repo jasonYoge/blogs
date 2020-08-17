@@ -1,7 +1,9 @@
 'use strict';
 
 const path = require('path');
+
 const _ = require('lodash');
+
 const siteConfig = require('../../config.js');
 
 module.exports = async (graphql, actions) => {
@@ -21,7 +23,7 @@ module.exports = async (graphql, actions) => {
     }
   `);
 
-  _.each(result.data.allMarkdownRemark.group, tag => {
+  _.each(result.data.allMarkdownRemark.group, (tag) => {
     const numPages = Math.ceil(tag.totalCount / postsPerPage);
     const tagSlug = `/tag/${_.kebabCase(tag.fieldValue)}`;
 

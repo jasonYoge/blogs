@@ -1,7 +1,9 @@
 import React from 'react';
 import format from 'date-fns/format';
 import { Link } from 'gatsby';
+
 import { Edges } from '../../types';
+
 import styles from './Feed.module.scss';
 
 type Props = {

@@ -1,6 +1,7 @@
 'use strict';
 
 const React = require('react');
+
 const siteConfig = require('../config.js');
 
 const katexStylesheet = require('!css-loader!../static/css/katex/katex.min.css');

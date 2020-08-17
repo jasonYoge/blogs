@@ -1,6 +1,7 @@
 'use strict';
 
 const path = require('path');
+
 const siteConfig = require('../../config.js');
 
 module.exports = async (graphql, actions) => {

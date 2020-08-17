@@ -1,6 +1,6 @@
 module.exports = {
   globals: {
-    __PATH_PREFIX__: true
+    __PATH_PREFIX__: true,
   },
   parser: '@typescript-eslint/parser', // Specifies the ESLint parser
   extends: [
@@ -27,7 +27,6 @@ module.exports = {
     sourceType: 'module', // Allows for the use of imports
     ecmaFeatures: {
       jsx: true,
-      modules: true,
     },
   },
   rules: {
