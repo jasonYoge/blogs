@@ -37,7 +37,10 @@ const Author = ({ author, isIndex }: Props): JSX.Element => (
         </Link>
       </h2>
     )}
-    <p className={styles['author__subtitle']}>{author.bio}</p>
+    <p className={styles['author__subtitle']}>
+      {author.bio}
+      <cite>-Bertrand Russell</cite>
+    </p>
   </div>
 );
 
