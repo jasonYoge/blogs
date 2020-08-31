@@ -2,7 +2,7 @@
 
 module.exports = {
   url: 'https://jasonyoge.github.io',
-  pathPrefix: '/blog',
+  pathPrefix: '/',
   title: 'JasonYoge个人博客',
   subtitle: 'A personal blog belongs to JasonYoge.',
   copyright: '© All rights reserved.',

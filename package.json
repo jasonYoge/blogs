@@ -6,7 +6,7 @@
   "scripts": {
     "start": "yarn run clean && gatsby develop",
     "build": "yarn run clean && gatsby build",
-    "deploy": "yarn run clean && gatsby build --prefix-paths && gh-pages -d public -b master",
+    "deploy": "yarn run clean && gatsby build --prefix-paths && gh-pages -d public -b master -r https://github.com/jasonYoge/jasonyoge.github.io.git",
     "clean": "rimraf .cache public",
     "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx .",
     "lint:scss": "stylelint \"src/**/*.scss\"",
