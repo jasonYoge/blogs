@@ -6,7 +6,7 @@
   "scripts": {
     "start": "yarn run clean && gatsby develop",
     "build": "yarn run clean && gatsby build",
-    "deploy": "yarn run clean && gatsby build --prefix-paths && gh-pages -d public",
+    "deploy": "yarn run clean && gatsby build --prefix-paths && gh-pages -d public -b master",
     "clean": "rimraf .cache public",
     "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx .",
     "lint:scss": "stylelint \"src/**/*.scss\"",
@@ -107,7 +107,7 @@
     "eslint-plugin-react": "^7.20.3",
     "eslint-watch": "7.0.0",
     "gatsby-plugin-eslint": "^2.0.8",
-    "gh-pages": "3.1.0",
+    "gh-pages": "^3.1.0",
     "husky": "^4.2.5",
     "identity-obj-proxy": "3.0.0",
     "jest": "26.1.0",
