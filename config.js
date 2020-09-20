@@ -6,7 +6,7 @@ module.exports = {
   title: 'JasonYoge个人博客',
   subtitle: 'A personal blog belongs to JasonYoge.',
   copyright: '© All rights reserved.',
-  disqusShortname: '',
+  disqusShortname: 'jasonyoge',
   postsPerPage: 4,
   googleAnalyticsId: 'UA-73379983-2',
   useKatex: false,
